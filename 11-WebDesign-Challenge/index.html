@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>Air Pollution Project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Lattitude</a>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: Charcoal, sans-serif">
+    <a class="navbar-brand" style="color: rgb(8, 8, 8)" href="#"><b>Pollution</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,63 +20,117 @@
       <ul class="navbar-nav navbar-right">
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Plots
+        Analysis
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/max_temp.html" target="_blank">Max Temperture</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/humidity.html" target="_blank">Humidity</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/cloudiness.html" target="_blank">Cloudiness</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/wind_speed.html" target="_blank">Wind Speed</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase1.html" target="_blank">Phase 1</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase2.html" target="_blank">Phase 2</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/conclusion.html" target="_blank">Conclusion</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/plots.html" target="_blank">Plots</a>
       </div>
       </li>
-      <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/comparison.html" target="_blank tabindex="-1">Comparition</a>
       <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Data.html" target="_blank tabindex="-1">Data</a>
+      <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Code.html" target="_blank tabindex="-1">Code</a>
       </ul>
       
     </div>
   </nav>
 
+<!-- Creater he slide base on this codes: https://www.w3schools.com/w3js/w3js_slideshow.asp and 
+  https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+<div class="slideshow-container">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    
+    <img class="nature" src="Images/slide1.jpg" width=100%>  
+    <img class="nature" src="Images/slide2.jpg" width=100%>
+    <div class="text">“While we’ve made progress over the last 40-plus years improving air quality in the U.S. thanks to the Clean Air Act, 
+      climate change will make it harder in the future to meet pollution standards, which are designed to protect health,” says Kim Knowlton, 
+      senior scientist and deputy director of the NRDC Science Center.</div>
+
+    
+    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+    <p>
+    <a class="prev" onclick="myShow.previous()">&#10094;  
+    </a>
+    <a class="next" onclick="myShow.next()">&#10095;
+    </a>
+    </p>
+    
+    <script>
+    myShow = w3.slideshow(".nature", 0);
+    </script>
+</div>
+
+
 
 
   <div class="row">
-    <div class="col-sm-12 col-md-7">
+    <div class="col-md-7 col-sm-12">
       <div class="box1">
-      <h1 class="display1">Summary: Latitude vs. X</h1>
+      <h1 class="display1">U.S. Air Pollution Report</h1>
       <hr>
-      <p><img width="200" height="150" src="Resources/assets/images/Fig1.png" alt="Fig1" class="left"> The purpose of this project was to analyze how weather changes as you get closer to the equator. 
-        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+      <p align="justify"><img width=60% style="float: left; padding-right: 30px;" src="Images/heat.PNG" alt="Fig1" class="left"/> Air pollutants are derived from 
+        many sources, but are not always visible to the naked eye. According to the United States Environmental Protection Agency (EPA), 
+        air pollution can be defined as a combination of gases and particles in the atmosphere that can reach harmful concentrations and 
+        have a negative effect on the health of people, animals, and the environment. There have been considerable air pollution prevention 
+        and control measures put in place over the years. The focus of this data study is to follow the trend of pollution in the United 
+        States over a 17-year period to determine if there is a linear trend in NO2 mean levels in the U.S and if there are significant 
+        differences in NO2 mean levels among U.S. regions.
       </p>
-      <p> After assembling the dataset, we used Matplotlib to plot various aspects of weather vs. latitude. Factors we looked
-        at included: temperture, cloudiness, wind speed, and humidity. This site provides the source data and visuaizations created
-        as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+      <p><b>Hypotheses</b></p>
+      <p align="justify">TEST 1:
+        Null Hypothesis: There is not a linear trend in NO2 mean levels in the U.S. between the years 2000 to 2015.
+        Alternative Hypothesis: There is a linear trend in NO2 mean levels in the U.S. between the years 2000 to 2015.
+      </p>
+      <p align="justify">
+        TEST 2:
+        Null Hypothesis: There is not a significant difference in NO2 mean levels among U.S. regions between the years 2000 to 2015.
+        Alternative Hypothesis: There is a significant difference in NO2 mean levels among U.S. regions between the years 2000 to 2015.
+        
       </p>
       </div>
     </div>
-      
-    <div class="col-md-3">
+    
+    
+    <section class="fill-height-or-more">
+    <div class="col-md-12 col-sm-12" >
       <div class="box2">
       <!-- display images source link: https://www.quora.com/How-we-place-two-images-side-by-side-in-html -->
-      <h2 class="display1" style="font-size:30px">Visualizations</h2>
-      <hr>
-        
+      <h2 class="display1" style="color: white;">Visualizations</h2>
+      <hr color="white">
+      
+      
       <div style="display:flex">
         <div class="rowval">
+        <div style="flex:1;padding-right:5px;padding-bottom:10px;">
+             <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase1.html" target="_blank"><img src="Images/line.PNG" width="125" height="125" ></a>
+        </div>
         <div style="flex:1;padding-right:5px;">
-             <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/max_temp.html" target="_blank"><img src="Resources/assets/images/Fig1.png" style="width:100%"></a>
+          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase2.html" target="_blank"><img src="Images/regional.PNG" width="125" height="125"></a>
+        </div>
+        </div>
+        
+        <div class="rowval">
+        <div style="flex:1;padding-left:5px;padding-bottom:10px;">
+          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase1.html" target="_blank"><img src="Images/linear.PNG" width="125" height="125"></a>
         </div>
         <div style="flex:1;padding-left:5px;">
-          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/cloudiness.html" target="_blank"><img src="Resources/assets/images/Fig3.png" style="width:100%"></a>
+          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase2.html" target="_blank"><img src="Images/boxplot.PNG" width="125" height="125"></a>
         </div>
         </div>
-        <div class="rowval">
-        <div style="flex:1;padding-right:5px;">
-          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/humidity.html" target="_blank"><img src="Resources/assets/images/Fig2.png" style="width:100%"></a>
-        </div>
-        <div style="flex:1;padding-right:5px;">
-          <a href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/wind_speed.html" target="_blank"><img src="Resources/assets/images/Fig4.png" style="width:100%"></a>
-        </div>
-        </div>
+
       </div>
+      
+
+      <!-- image from https://unsplash.com/ -->
+      <!-- <div style="flex:1;padding-top:50px;padding-left:50px;">
+        <img src="Images/pollution.jpg" width=10% >
+      </div> -->
+
+    </section>
 
 
       </div>

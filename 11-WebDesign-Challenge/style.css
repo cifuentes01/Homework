@@ -1,15 +1,15 @@
 body {
-  background: #f1f1f1;
+  background: #fff;
 }
 
 .navbar{
-  background: #fff;
+  background: rgb(7, 7, 7);
   padding-bottom: 0px;
   padding-top: 0px;
 }
 
 .navbar-brand {
-  background: rgb(76, 179, 170);
+  background: #fff;
   padding: 10px;
   margin-left: 100px;
 }
@@ -23,8 +23,16 @@ img.left {
   padding: 10px;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
 .display1 {
-  color: rgb(76, 179, 170);
+  color: rgb(139, 139, 139);
 }
 
 .data-info{
@@ -54,20 +62,20 @@ h3 {
 }
 
 .box1 {
-  height: 370px;
+  height: 650px;
   padding: 20px;
   color: rgb(73, 70, 70);
   background: #fff;
   margin-top: 40px;
   margin-left: 200px;
+  margin-bottom: 30px;
 }
 
 .box2 {
-  height: 330px;
+  height: 730px;
   padding: 40px;
-  color: rgb(73, 70, 70);
-  background: #fff;
-  margin-top: 40px;
+  background-image: url('Images/cielo.jpg');
+  margin-top: 0px;
 }
 
 .box3 {
@@ -75,19 +83,49 @@ h3 {
   padding: 20px;
   color: rgb(73, 70, 70);
   background: #fff;
+  border: grey;
+  /* border-style: solid;
+  border-color: grey;
+  border-width: thin; */
   margin-top: 40px;
   margin-left: 300px;
   margin-bottom: 30px;
 }
 
 .box4 {
-  height: 750px;
+  height: 870px;
   padding: 20px;
   color: rgb(73, 70, 70);
   background: #fff;
   margin-top: 40px;
   margin-left: 200px;
   margin-bottom: 30px;
+  border: 1px solid rgb(192, 190, 190);
+}
+
+.box5 {
+  height: 760px;
+  padding: 30px;
+  background: #fff;
+  margin-top: 40px;
+  margin-left: 300px;
+  margin-bottom: 30px;
+}
+
+.box6 {
+  height: 330px;
+  padding: 40px;
+  background: #fff;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(192, 190, 190);
+}
+
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -117,21 +155,73 @@ h3 {
     background-color: #eee;
   }
  
+
+
+  .slideshow-container {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #080808;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 80px;
+  left: 110px;
+  width: 80%;
+  text-align: center;
+}
+
+.nature {
+  opacity: 0.5;
+}
+
+
   @media (max-width: 767px) {
 
     .navbar-brand {
       flex: 1;
       margin-left: 10px;
+      border-bottom: 1px solid black;
     }
 
     .box1 {
-      height: 380px;
+      height: 710px;
       margin-left: 50px;
       margin-right: 50px;
       }
     
     .box2{
-      height: 220px;
+      height: 250px;
       margin-left: 50px;
       margin-right: 50px;
       margin-top: 10px;
@@ -145,6 +235,12 @@ h3 {
 
     .box4 {
       height: 640px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .box5 {
+      height: 1850px;
       margin-left: 50px;
       margin-right: 50px;
     }

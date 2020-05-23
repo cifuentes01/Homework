@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>Air Pollution Project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/index.html" target="_blank">Lattitude</a>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: Charcoal, sans-serif">
+    <a class="navbar-brand" style="color: rgb(8, 8, 8)" href="#"><b>Pollution</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,17 +20,17 @@
       <ul class="navbar-nav navbar-right">
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Plots
+        Analysis
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/max_temp.html" target="_blank">Max Temperture</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/humidity.html" target="_blank">Humidity</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/cloudiness.html" target="_blank">Cloudiness</a>
-        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/wind_speed.html" target="_blank">Wind Speed</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase1.html" target="_blank">Phase 1</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Phase2.html" target="_blank">Phase 2</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/conclusion.html" target="_blank">Conclusion</a>
+        <a class="dropdown-item" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/plots.html" target="_blank">Plots</a>
       </div>
       </li>
-      <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/comparison.html" target="_blank tabindex="-1">Comparition</a>
       <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Data.html" target="_blank tabindex="-1">Data</a>
+      <a class="nav-link" href="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/Code.html" target="_blank tabindex="-1">Code</a>
       </ul>
       
     </div>
@@ -40,12 +40,31 @@
     <div class="col-sm-11 col-md-10">
       <div class="box3">
       <div class="data-info">
-      <h1 class="display1">Data</h1>
+      <h1 class="display1">Data Exploration & Cleanup</h1>
       <hr>
-      <p>The following table includes all of the data used for plotting during this project.</p>
+      <p>Data source: data.world <a href="https://data.world/data-society/us-air-pollution-data" target="_blank">https://data.world/data-society/us-air-pollution-data</a></p>
+      <p>File size: 411.49MB</p>
+      <p align="justify"><img width=50% style="float: left; padding-right: 30px;" src="Images/initialdata.PNG" alt="Fig1" class="left"/>The dataset contains 1,746,661 rows and 28 columns of air pollution data documented 
+        by the U.S. EPA on a daily basis from 2000 to 2016. It contains information about four pollutants: Nitrogen 
+        Dioxide (NO2), Sulphur Dioxide (SO2), Carbon Monoxide (CO) and Ozone (O3).In addition, the dataset includes the 
+        state, city, address, and date of monitoring.</p>
+      <p align="justify">The U.S. Air Pollution data was generally clean and did not require a lot of manipulation. We removed 
+        “Country of Mexico” and all related data as our study focused solely on the United States. We also made the decision 
+        to choose 1 pollutant to focus on in the interest of time. We chose to focus on the pollutant Nitrogen Dioxide as it 
+        is the most harmful to humans. High concentrations of Nitrogen Dioxide in the atmosphere can irritate the airways in 
+        the human respiratory system causing coughing, wheezing or difficulty breathing. Prolonged exposure to Nitrogen Dioxide 
+        can make the lungs more susceptible to infection, asthma and respiratory disease. In addition to this, Nitrogen Dioxide 
+        can mix with other gases in the atmosphere to produce haze, acid rain and contribute to nutrient pollution in the coastal 
+        waters (<a href="https://www.epa.gov/" target="_blank">epa.gov</a>).</p>
+      <p align="justify">Data was grouped two ways for analysis of each hypothesis. First, data was grouped by year to complete 
+        the year-over-year analysis. Next, data was grouped by region to complete the regional analysis. States were grouped into 
+        regions based on the regional chart located on the U.S. Embassy website. The four regions were; West, Midwest, South and 
+        Northeast.
+      </p>
+      <p><b>Dataset</b> (sample of 100 records):</p>
       
       <div class="table-page">
-        <iframe src="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/cities.html" width=100% height=550px style="border: none;"></iframe>
+        <iframe src="file:///C:/Users/Anita/OneDrive/Documentos/GitHub/Homework/11-WebDesign-Challenge/pollution.html" width=100% height=550px style="border: none;"></iframe>
       </div>
       </div>
             
