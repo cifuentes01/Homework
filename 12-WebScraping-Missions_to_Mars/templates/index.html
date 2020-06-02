@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Costa Rica Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <h2>Latest Mars News</h2>
+    <h4>{{Mars.headline}}</h4>
+    <h6>{{Mars.story}}</h6>
+
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between">
+      <div>
+        <br>
+        <h2>Featured Mars Image</h2>
+        <img src="{{ Mars.Mars_img }}" alt="Mars">
+      </div>
+      <div>
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">Current Weather on Mars</h4>
+            <p class="card-text">Sol {{ Mars.sol}}({{Mars.date}}, {{Mars.sky}}, high {{mars.highest}}, 
+              low {{lowest}}, pressure at {{Mars.pressure}}, daylight {{Mars.daylight}}</p>
+          </div>
+        </div>
+        <br>
+        <h4>Mars Facts</h4>
+        <table border ="1">
+          <tr>
+            <th></th>
+            <th>Value</th> 
+          </tr>
+          <tr>
+            <th>description</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td><b>Equatorial Diameter:</b></td>
+            <td>6,792 km</td>
+          </tr>
+          <tr>
+            <td><b>Polar Diameter:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Mass:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Moons:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Orbit Distance:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Orbit Period:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Surface temperature:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>First Record:</b></td>
+            <td>6,752 km</td>
+          </tr>
+          <tr>
+            <td><b>Recorder By:</b></td>
+            <td>6,752 km</td>
+          </tr>
+        </table>
+      </div>
+   </div>
+
+
+  </div>
+
+
+</body>
+
+</html>
