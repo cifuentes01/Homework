@@ -13,7 +13,7 @@ def scrape_info():
     browser = init_browser()
 
     # Visit visitcostarica.herokuapp.com
-    url = "https://visitcostarica.herokuapp.com/"
+    url = "https://mars.nasa.gov/news/"
     browser.visit(url)
 
     time.sleep(1)
@@ -22,28 +22,35 @@ def scrape_info():
     html = browser.html
     soup = bs(html, "html.parser")
 
+    # Get headline
+    Mars_data["headline"] = soup.find("div", class_="content_title").get_text()
+
+    # Get article
+    Mars_data["article"] = soup.find("div", class_="article_teaser_body").get_text()
+
     # Get the average temps
-    avg_temps = soup.find('div', id='weather')
+    #avg_temps = soup.find('div', id='weather')
 
     # Get the min avg temp
-    min_temp = avg_temps.find_all('strong')[0].text
+    #min_temp = avg_temps.find_all('strong')[0].text
 
     # Get the max avg temp
-    max_temp = avg_temps.find_all('strong')[1].text
+    #max_temp = avg_temps.find_all('strong')[1].text
 
     # BONUS: Find the src for the sloth image
-    relative_image_path = soup.find_all('img')[2]["src"]
-    sloth_img = url + relative_image_path
+    #relative_image_path = soup.find_all('img')[0]["src"]
+    #Mars_data["Mars_img"] = url + relative_image_path
 
     # Store data in a dictionary
-    costa_data = {
-        "sloth_img": sloth_img,
-        "min_temp": min_temp,
-        "max_temp": max_temp
-    }
+    #costa_data = {
+    #    "Mars_img": Mars_img,
+    #    "min_temp": min_temp,
+    #    "max_temp": max_temp
+    #}
+    Mars_data = {}
 
     # Close the browser after scraping
     browser.quit()
 
     # Return results
-    return costa_data
+    return Mars_data
