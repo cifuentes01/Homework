@@ -206,7 +206,7 @@ h3 {
 }
 
 
-  @media (max-width: 767px) {
+  @media (max-width: 867px) {
 
     .navbar-brand {
       flex: 1;
@@ -255,4 +255,22 @@ h3 {
       padding: 10px;
     }
   
+}
+
+@media (min-width: 867px) {
+      .col-md-7 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      }
+}
+
+
+element.style {
+}
+@media (min-width: 768px)
+.col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
